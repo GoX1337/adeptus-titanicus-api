@@ -1,8 +1,6 @@
 package com.gox.adeptus.titanicus.api.component;
 
-import com.gox.adeptus.titanicus.api.entity.Banner;
 import com.gox.adeptus.titanicus.api.entity.Maniple;
-import com.gox.adeptus.titanicus.api.repository.BannerRepository;
 import com.gox.adeptus.titanicus.api.repository.ManipleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

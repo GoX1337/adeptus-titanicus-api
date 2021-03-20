@@ -19,6 +19,5 @@ public class ManipleController {
     @GetMapping
     public List<Maniple> get(){
         return manipleService.findAll();
-
     }
 }
