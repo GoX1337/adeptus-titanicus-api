@@ -12,7 +12,7 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
-public class Titan {
+public class TitanPattern {
 
     @Id
     @GeneratedValue
@@ -24,10 +24,10 @@ public class Titan {
     @Column
     private int cost;
 
-    public Titan() {
+    public TitanPattern() {
     }
 
-    public Titan(String name, int cost) {
+    public TitanPattern(String name, int cost) {
         this.name = name;
         this.cost = cost;
     }

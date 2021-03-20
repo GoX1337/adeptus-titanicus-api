@@ -1,7 +1,7 @@
 package com.gox.adeptus.titanicus.api.component;
 
-import com.gox.adeptus.titanicus.api.entity.Banner;
-import com.gox.adeptus.titanicus.api.repository.BannerRepository;
+import com.gox.adeptus.titanicus.api.entity.BannerPattern;
+import com.gox.adeptus.titanicus.api.repository.BannerPatternRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -10,16 +10,16 @@ import org.springframework.stereotype.Component;
 public class BannerCommandLineRunner implements CommandLineRunner {
 
     @Autowired
-    private BannerRepository bannerRepository;
+    private BannerPatternRepository bannerPatternRepository;
 
     @Override
     public void run(String... args) throws Exception {
-        Banner b1 = new Banner("Acastus Knight Banner", 150);
-        Banner b2 = new Banner("Cerastus Knight Banner", 130);
-        Banner b3 = new Banner("Questoris Knight Banner", 120);
+        BannerPattern b1 = new BannerPattern("Acastus Knight Banner", 150);
+        BannerPattern b2 = new BannerPattern("Cerastus Knight Banner", 130);
+        BannerPattern b3 = new BannerPattern("Questoris Knight Banner", 120);
 
-        bannerRepository.save(b1);
-        bannerRepository.save(b2);
-        bannerRepository.save(b3);
+        bannerPatternRepository.save(b1);
+        bannerPatternRepository.save(b2);
+        bannerPatternRepository.save(b3);
     }
 }

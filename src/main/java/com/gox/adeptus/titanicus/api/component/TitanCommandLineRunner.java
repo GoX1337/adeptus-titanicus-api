@@ -1,7 +1,7 @@
 package com.gox.adeptus.titanicus.api.component;
 
-import com.gox.adeptus.titanicus.api.entity.Titan;
-import com.gox.adeptus.titanicus.api.repository.TitanRepository;
+import com.gox.adeptus.titanicus.api.entity.TitanPattern;
+import com.gox.adeptus.titanicus.api.repository.TitanPatternRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -10,19 +10,19 @@ import org.springframework.stereotype.Component;
 public class TitanCommandLineRunner implements CommandLineRunner {
 
     @Autowired
-    private TitanRepository titanRepository;
+    private TitanPatternRepository titanPatternRepository;
 
     @Override
     public void run(String... args) throws Exception {
-        Titan t1 = new Titan("Warlord Sinister", 685);
-        Titan t2 = new Titan("Warlord", 385);
-        Titan t3 = new Titan("Warlord Nemesis", 325);
-        Titan t4 = new Titan("Reaver", 250);
-        Titan t5 = new Titan("Warhound", 180);
-        titanRepository.save(t1);
-        titanRepository.save(t2);
-        titanRepository.save(t3);
-        titanRepository.save(t4);
-        titanRepository.save(t5);
+        TitanPattern t1 = new TitanPattern("Warlord Sinister", 685);
+        TitanPattern t2 = new TitanPattern("Warlord", 385);
+        TitanPattern t3 = new TitanPattern("Warlord Nemesis", 325);
+        TitanPattern t4 = new TitanPattern("Reaver", 250);
+        TitanPattern t5 = new TitanPattern("Warhound", 180);
+        titanPatternRepository.save(t1);
+        titanPatternRepository.save(t2);
+        titanPatternRepository.save(t3);
+        titanPatternRepository.save(t4);
+        titanPatternRepository.save(t5);
     }
 }

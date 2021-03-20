@@ -1,6 +1,5 @@
 package com.gox.adeptus.titanicus.api.entity;
 
-import com.gox.adeptus.titanicus.api.entity.type.WeaponType;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,7 +12,7 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
-public class Banner {
+public class ManiplePattern {
 
     @Id
     @GeneratedValue
@@ -25,10 +24,10 @@ public class Banner {
     @Column
     private int cost;
 
-    public Banner() {
+    public ManiplePattern() {
     }
 
-    public Banner(String name, int cost) {
+    public ManiplePattern(String name, int cost) {
         this.name = name;
         this.cost = cost;
     }
