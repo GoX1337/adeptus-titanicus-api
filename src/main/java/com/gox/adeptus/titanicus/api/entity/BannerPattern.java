@@ -1,7 +1,9 @@
 package com.gox.adeptus.titanicus.api.entity;
 
 import com.gox.adeptus.titanicus.api.entity.type.WeaponType;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -13,6 +15,8 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class BannerPattern {
 
     @Id
@@ -25,11 +29,6 @@ public class BannerPattern {
     @Column
     private int cost;
 
-    public BannerPattern() {
-    }
-
-    public BannerPattern(String name, int cost) {
-        this.name = name;
-        this.cost = cost;
+    public BannerPattern(String acastus_knight_banner, int i) {
     }
 }

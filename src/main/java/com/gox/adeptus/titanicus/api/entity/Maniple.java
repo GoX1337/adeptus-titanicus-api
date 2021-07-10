@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -14,19 +15,24 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Battlegroup {
+public class Maniple {
 
     @Id
     @GeneratedValue
     private UUID id;
 
-    @Column
-    private String name;
+    @OneToOne
+    @JoinColumn(name="maniple_pattern_id")
+    private ManiplePattern pattern;
 
     @OneToMany
-    private List<Maniple> maniples;
-
-    @OneToMany
+    @JoinColumn(name = "titan_id")
     private List<Titan> titans;
 
+    public List<Titan> getTitans() {
+        if(titans == null){
+            titans = new ArrayList<>();
+        }
+        return titans;
+    }
 }

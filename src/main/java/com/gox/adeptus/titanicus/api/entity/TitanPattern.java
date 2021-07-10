@@ -1,6 +1,8 @@
 package com.gox.adeptus.titanicus.api.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -12,6 +14,8 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class TitanPattern {
 
     @Id
@@ -23,9 +27,6 @@ public class TitanPattern {
 
     @Column
     private int cost;
-
-    public TitanPattern() {
-    }
 
     public TitanPattern(String name, int cost) {
         this.name = name;

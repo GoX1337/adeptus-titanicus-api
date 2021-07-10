@@ -1,7 +1,7 @@
 package com.gox.adeptus.titanicus.api.controller;
 
-import com.gox.adeptus.titanicus.api.entity.ManiplePattern;
-import com.gox.adeptus.titanicus.api.service.ManiplePatternService;
+import com.gox.adeptus.titanicus.api.entity.Titan;
+import com.gox.adeptus.titanicus.api.service.TitanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,14 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("maniple/pattern")
-public class ManiplePatternController {
+@RequestMapping("titan")
+public class TitanController {
 
     @Autowired
-    private ManiplePatternService maniplePatternService;
+    private TitanService titanService;
 
     @GetMapping
-    public List<ManiplePattern> get(){
-        return maniplePatternService.findAll();
+    public List<Titan> get(){
+        return titanService.findAll();
+
     }
 }

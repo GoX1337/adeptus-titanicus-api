@@ -8,4 +8,6 @@ import java.util.UUID;
 
 @Repository
 public interface TitanPatternRepository extends CrudRepository<TitanPattern, UUID> {
+
+    TitanPattern findByName(String name);
 }
